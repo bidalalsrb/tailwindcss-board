@@ -1,1 +1,8 @@
-# tailwindcss-board
+# tailwindcss를 이용한 로그인-board 프로젝트
+
+1. 로그인
+2. 게시판
+   1. 등록
+   2. 수정
+   3. 삭제
+   4. 보기
