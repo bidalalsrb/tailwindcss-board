@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Login() {
+function Login({ setUserId }) {
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -9,10 +9,10 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // ID와 비밀번호가 "1"인 경우 로그인 성공
     if (id === '1' && password === '1') {
       alert('로그인 성공!');
-      navigate('/board'); // 로그인 성공 시 게시판으로 이동
+      setUserId(id); // 로그인 성공 시 userId 설정
+      navigate('/board'); // 게시판으로 이동
     } else {
       alert('로그인 실패: ID 또는 비밀번호를 확인하세요.');
     }
